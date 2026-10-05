@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#11141b">
+  <meta name="description" content="Invictus Sanctorum — Warhammer 40,000 roleplay loading screen.">
+  <title>Invictus Sanctorum | Warhammer 40,000 Roleplay</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%2311141b'/%3E%3Cpath d='M7 5h18v22H7z' fill='none' stroke='%23c8a66d'/%3E%3Cpath d='M13 10h6m-3 0v12m-3 0h6' fill='none' stroke='%23eadcc4' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <video id="wallpaper" class="wallpaper" autoplay muted loop playsinline preload="auto" poster="assets/wallpaper-poster.jpg">
+      <source src="assets/ultramarines-wallpaper.webm" type="video/webm">
+    </video>
+    <div class="backdrop-shade"></div>
+    <div class="frame-line frame-line-top"></div>
+    <div class="frame-line frame-line-bottom"></div>
+  </div>
+
+  <div class="screen">
+    <header class="masthead">
+      <div class="identity">
+        <span class="identity-mark" aria-hidden="true">I</span>
+        <div class="identity-text">
+          <span class="overline" id="realm-label">WARHAMMER 40,000</span>
+          <span class="identity-subtitle">ROLEPLAY</span>
+        </div>
+      </div>
+      <div class="link-state">
+        <span class="link-indicator" aria-hidden="true"></span>
+        <span id="connection-label">ESTABLISHING LINK</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-heading">
+        <p class="hero-kicker" id="hero-kicker">IN THE NAME OF THE EMPEROR</p>
+        <h1 id="brand-heading"><span id="brand-first">INVICTUS</span><span id="brand-second">SANCTORUM</span></h1>
+        <div class="title-divider" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+        <p class="motto" id="motto">The Emperor protects.</p>
+      </div>
+      <aside class="field-note" aria-label="Roleplay tip">
+        <span class="field-note-rule" aria-hidden="true"></span>
+        <div>
+          <div class="tip-heading"><span class="overline">FIELD BRIEFING</span><span class="tip-counter" id="tip-counter">01 / 04</span></div>
+          <p class="tip-text" id="tip-text">Stay in character. Keep out-of-character conversation in the appropriate channel.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="loading-console">
+      <section class="server-details" aria-label="Server information">
+        <div class="detail detail-server"><span class="detail-label">DESTINATION</span><span class="detail-value" id="server-name">Invictus Sanctorum</span></div>
+        <div class="detail"><span class="detail-label">MAP</span><span class="detail-value" id="map-name">Awaiting coordinates</span></div>
+        <div class="detail detail-gamemode"><span class="detail-label">GAMEMODE</span><span class="detail-value" id="gamemode-name">Warhammer 40,000 RP</span></div>
+      </section>
+      <section class="download-panel" aria-label="Loading progress">
+        <div class="progress-heading">
+          <span class="status-text" id="loading-status" role="status" aria-live="polite">Establishing connection…</span>
+          <span class="progress-number" id="loading-percent">—</span>
+        </div>
+        <div id="loading-bar" class="progress-track is-indeterminate" role="progressbar" aria-label="Resource download progress" aria-valuemin="0" aria-valuemax="100" aria-valuetext="Waiting for download information">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-meta">
+          <span class="current-file" id="current-file">Awaiting deployment data</span>
+          <span class="file-count" id="file-count">Preparing connection</span>
+        </div>
+      </section>
+      <div class="console-foot"><span id="footer-name">INVICTUS SANCTORUM</span><span>ONLY IN DEATH DOES DUTY END.</span></div>
+    </footer>
+  </div>
+  <script src="loading.js"></script>
+</body>
+</html>
